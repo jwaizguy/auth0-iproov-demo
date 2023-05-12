@@ -11,14 +11,13 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'auth0-poc';
-
   constructor(
     private auth0Service: AuthService,
     private router: Router
   ) {
     this.auth0Service.isAuthenticated$.subscribe((isAuth) => {
       if (isAuth) {
-       this.router.navigate(['/iproov-auth'])
+        this.router.navigate(['/iproov-auth'])
       }
     });
   }

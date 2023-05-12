@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import '@iproov/web-sdk';
 
 @Component({
@@ -7,9 +7,7 @@ import '@iproov/web-sdk';
   styleUrls: ['./iproov.component.scss'],
 })
 export class IproovComponent {
-
-  
-  token = '74ed74e4b0e6d117c4132b7b4d8a2878f11c6f68b4b2b7b6a9b556db1801vu01';
+  token = 'f6b51860e3151c8c32bcea40d8448ae54155a22520ece0ce36165ad81801vu01';
 
 
   ngOnInit() {
@@ -25,14 +23,15 @@ export class IproovComponent {
 
       iProovMe.innerHTML = `
       <div slot="button">
-          <button type="button">
-              Scan Face
+          <button style="background-color:#40c67c; border: none; padding: 1rem; border-radius: .5rem; cursor: pointer; color: white; font-weight: 600" type="button">
+              Reconhecimento facial
           </button>
       </div>`;
 
       document
         .getElementById('iproov-container')
         ?.insertAdjacentElement('beforebegin', iProovMe);
+
     });
   }
 }
