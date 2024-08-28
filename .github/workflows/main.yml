@@ -11,7 +11,7 @@ jobs:
     steps:
      - name: checkout-bitbucket
        #run: git clone ${{ BITBUCKET_REPO_URL }}
-       run: git clone https://bitbucket.org/jwpolaris/webgoat71.git
+       run: git clone https://waizguy@bitbucket.org/jwpolaris/auth0-iproov-demo.git
      - name: Polaris Scan
        uses: synopsys-sig/synopsys-action@v1.11.0
        with:
