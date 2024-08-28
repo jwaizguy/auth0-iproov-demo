@@ -12,6 +12,19 @@ jobs:
      - name: checkout-bitbucket
        #run: git clone ${{ BITBUCKET_REPO_URL }}
        run: git clone https://waizguy@bitbucket.org/jwpolaris/auth0-iproov-demo.git
+     - name: Setup Node.js environment
+       uses: actions/setup-node@v4.0.3
+       with:
+    # Version Spec of the version to use. Examples: 12.x, 10.15.1, >=10.15.0.
+         node-version: 10.15.1
+    # File containing the version Spec of the version to use.  Examples: package.json, .nvmrc, .node-version, .tool-versions.
+    # node-version-file: # opti
+    
+    # Used to specify a package manager for caching in the default directory. Supported values: npm, yarn, pnpm.
+         cache: npm,yarn,pnpm
+    # Used to specify the path to a dependency file: package-lock.json, yarn.lock, etc. Supports wildcards or a list of file names for caching multiple dependencies.
+        # cache-dependency-path: # optional
+          
      - name: Polaris Scan
        uses: synopsys-sig/synopsys-action@v1.11.0
        with:
