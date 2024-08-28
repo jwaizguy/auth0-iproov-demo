@@ -16,7 +16,7 @@ jobs:
        uses: actions/setup-node@v4.0.3
        with:
     # Version Spec of the version to use. Examples: 12.x, 10.15.1, >=10.15.0.
-         node-version:  10.15.1
+         node-version:  18.17.0
     # File containing the version Spec of the version to use.  Examples: package.json, .nvmrc, .node-version, .tool-versions.
     # node-version-file: # opti
     
