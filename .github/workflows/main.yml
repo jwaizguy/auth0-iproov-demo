@@ -24,7 +24,7 @@ jobs:
          cache: npm
     # Used to specify the path to a dependency file: package-lock.json, yarn.lock, etc. Supports wildcards or a list of file names for caching multiple dependencies.
          cache-dependency-path: /home/runner/work/auth0-iproov-demo/*
-     - run: sh pwd, ls -l  
+     - run:  pwd, ls -l  
      - name: Polaris Scan
        uses: synopsys-sig/synopsys-action@v1.11.0
        env: 
