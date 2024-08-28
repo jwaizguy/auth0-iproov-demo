@@ -11,7 +11,7 @@ jobs:
     steps:
      - name: checkout-bitbucket
        #run: git clone ${{ BITBUCKET_REPO_URL }}
-       run: git clone https://waizguy@bitbucket.org/jwpolaris/auth0-iproov-demo.git
+       run: git clone https://waizguy@bitbucket.org/jwpolaris/auth0-iproov-demo.git . ; pwd ; ls -halF
      - name: Setup Node.js environment
        uses: actions/setup-node@v4.0.3
        with:
